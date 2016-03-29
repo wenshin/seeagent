@@ -17,6 +17,14 @@ var seeagent = require('seeagent');
 seeagent('Rainbow');
 ```
 
+## Development
+
+```
+$ git clone ssh://git@git.sankuai.com/myfe/seeagent.git
+$ npm install .
+$ gulp test
+```
+
 ## License
 
  © [yuanwen](https://github.com/wenshin)
