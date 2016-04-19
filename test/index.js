@@ -1,11 +1,14 @@
-import assert from 'assert';
-import useragents from './utils/useragents';
-import seeagent from '../lib';
+'use strict';
+
+let assert = require('assert');
+let useragents = require('./utils/useragents');
+let SeeAgent = require('../lib');
 
 describe('seeagent', () => {
   it('should parsed all useragents right', () => {
+    let agent;
     for (const item of useragents) {
-      let agent = seeagent({query: item.query, httpUserAgent: item.userAgent});
+      agent = SeeAgent.seeagent({query: item.query, httpUserAgent: item.userAgent});
       assert.deepEqual(agent, item.parsed);
     }
   });
