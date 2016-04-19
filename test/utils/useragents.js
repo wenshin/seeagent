@@ -39,13 +39,13 @@ export default [{
   parsed: {
     os: { family: 'iOS', major: '9', minor: '2', patch: '1' },
     device: { family: 'iPhone', major: '0', minor: '0', patch: '0' },
-    app: { family: 'Maoyan', major: '0', minor: '0', patch: '0' }
+    app: { family: 'Maoyan', major: '6', minor: '5', patch: '0' }
   }
 }, {
   userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) daxiang-app/1.0.0 Chrome/43.0.2357.65 Electron/0.30.4 Safari/537.36',
   parsed: {
-    os: { family: 'iOS', major: '9', minor: '2', patch: '1' },
-    device: { family: 'iPhone', major: '0', minor: '0', patch: '0' },
+    os: { family: 'Mac OS X', major: '10', minor: '11', patch: '3' },
+    device: { family: 'Other', major: '0', minor: '0', patch: '0' },
     app: { family: 'Daxiang', major: '1', minor: '0', patch: '0' }
   }
 }];
