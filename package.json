@@ -1,6 +1,7 @@
 {
   "name": "seeagent",
   "version": "0.1.0",
+  "engines" : { "node" : ">=4.2.0" },
   "description": "useragent,mobile,browser",
   "homepage": "http://git.sankuai.com/projects/MYFE/repos/seeagent/browse",
   "author": {
