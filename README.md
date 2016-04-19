@@ -13,9 +13,9 @@ $ npm install --save seeagent
 目前支持，美团、猫眼、大象、三星、PPTV、头条、票房等 APP 判断
 
 ```js
-var seeagent = require('seeagent');
+var SeeAgent = require('seeagent');
 
-var agentInfo = seeagent({
+var agentInfo = SeeAgent.seeagent({
     httpUserAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'
 });
 
@@ -32,7 +32,7 @@ console.log(agentInfo);
 ```
 $ git clone ssh://git@git.sankuai.com/myfe/seeagent.git
 $ npm install .
-$ gulp test
+$ npm run test
 ```
 
 ### 添加规则
