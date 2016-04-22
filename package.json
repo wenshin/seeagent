@@ -1,5 +1,5 @@
 {
-  "name": "seeagent",
+  "name": "@myfe/seeagent",
   "version": "0.1.0",
   "engines" : { "node" : ">=4.2.0" },
   "description": "useragent,mobile,browser",
