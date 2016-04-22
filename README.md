@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ npm install --save seeagent
+$ mnpm install --save @myfe/seeagent
 ```
 
 
@@ -26,6 +26,21 @@ console.log(agentInfo);
 //   app: { family: 'Chrome', major: '49', minor: '0', patch: '2623' }
 // }
 ```
+
+## API
+`SeeAgent.seeagent({query, httpUserAgent, jsUserAgent})`
+获取操作系统、设备、和 App 信息
+
+**query**: URL query 参数字符串，用来辅助判断 App。
+**httpUserAgent**: HTTP UserAgent 字符串。
+**jsUserAgent**: useragent 包提供的额外的辅助判断字符串，详见 [useragent](https://github.com/3rd-Eden/useragent#useragentparseuseragent-string-js-useragent)。
+
+`SeeAgent.extendQueryRules({[appName]: [/regexp rule1/, /regexp rule2/]})`
+扩展通过 URL query 参数判断 APP 的规则
+
+`SeeAgent.extendFingerprints({[appName]: [/regexp rule1/, /regexp rule2/]})`
+扩展通过通过 UserAgent 参数判断 APP 的规则
+
 
 ## Development
 
