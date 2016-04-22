@@ -29,7 +29,6 @@
     "prepublish": "npm run test",
     "test": "mocha test"
   },
-  "private": true,
   "dependencies": {
     "useragent": "^2.1.9"
   }
