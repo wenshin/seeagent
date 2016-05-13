@@ -1,7 +1,7 @@
 'use strict';
 
 let assert = require('assert');
-let useragents = require('./utils/useragents');
+let useragents = require('./useragents');
 let SeeAgent = require('../lib');
 
 describe('seeagent', () => {
