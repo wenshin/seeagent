@@ -30,7 +30,7 @@
   },
   "scripts": {
     "prepublish": "npm run test",
-    "test": "mocha test"
+    "test": "node_modules/.bin/mocha $(find test -name '*.js' -depth 1 ! -name 'performance.js')"
   },
   "dependencies": {
     "ua-device-type": "0.0.4",
