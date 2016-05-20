@@ -96,7 +96,7 @@ module.exports = [{
   parsed: {
     os: { family: 'iOS', major: '9', minor: '3', patch: '2' },
     device: { family: 'iPhone', major: '0', minor: '0', patch: '0', type: 'phone' },
-    app: { family: 'Mobile Safari UIWebView', major: '9', minor: '3', patch: '2' }
+    app: { family: 'Mobile Safari UIWebView', vendor: 'QQMusic', major: '6', minor: '0', patch: '2' }
   }
 }, {
   userAgent: 'Mozilla/5.0 (Linux; Android 4.4.4; en-us; Nexus 5 Build/JOP40D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2307.2 Mobile Safari/537.36',
@@ -111,5 +111,12 @@ module.exports = [{
     os: { family: 'iOS', major: '8', minor: '4', patch: '0' },
     device: { family: 'iPhone', major: '0', minor: '0', patch: '0', type: 'phone' },
     app: { family: 'Mobile Safari UIWebView', vendor: 'Wechat', major: '6', minor: '2', patch: '4' }
+  }
+}, {
+  userAgent: 'Mogujie4iPhone/8.0.2 (iPhone; iOS 9.3.2; Scale/2.00)',
+  parsed: {
+    os: { family: 'iOS', major: '9', minor: '3', patch: '2' },
+    device: { family: 'iPhone', major: '0', minor: '0', patch: '0', type: 'phone' },
+    app: { family: 'Mobile Safari UIWebView', vendor: 'Mogujie', major: '4', minor: '0', patch: '0' }
   }
 }];
