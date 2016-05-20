@@ -44,7 +44,10 @@ console.log(agentInfo);
     }
 
 device 属性还特有 type 属性，值为 tv，desktop（桌面），phone，tablet（平板）。
-app 属性还特有 vendor 属性，该属性是为了和移动应用嵌入的 WebView 名称进行区分，一般是嵌入 WebView 的应用名或厂商名。
+
+app 属性还特有 vendor，isWebView 属性，
+1. vendor 属性是为了和移动应用嵌入的 WebView 名称进行区分，一般是嵌入 WebView 的应用名或厂商名。
+2. isWebView 属性是判断是否webview
 
 ## API
 
@@ -80,6 +83,10 @@ $ npm run test
 2. 判断网络状态（微信 UA 中有）
 
 ## ChangeLog
+
+### 2016-05-20 0.2.2
+
+*  添加 isWebView 属性到 app 属性
 
 ### 2016-05-20 0.2.1
 
