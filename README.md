@@ -56,10 +56,10 @@ app 属性还特有 vendor 属性，该属性是为了和移动应用嵌入的 W
 **jsUserAgent**: useragent 包提供的额外的辅助判断字符串，
 详见 [useragent](https://github.com/3rd-Eden/useragent#useragentparseuseragent-string-js-useragent)。
 
-`SeeAgent.extendQueryRules({[appName]: [/regexp rule1/, /regexp rule2/]})`
+`SeeAgent.extendQueryRules([{info: {vendor: 'App1'}, rules: [/App123/i, /App234/i]}])`
 扩展通过 URL query 参数判断 APP 的规则
 
-`SeeAgent.extendFingerprints({[appName]: [/regexp rule1/, /regexp rule2/]})`
+`SeeAgent.extendFingerprints([{info: {vendor: 'App1'}, rules: [/App123/i, /App234/i]}])`
 扩展通过通过 UserAgent 参数判断 APP 的规则
 
 
