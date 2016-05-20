@@ -9,7 +9,7 @@ describe('seeagent', () => {
     let agent;
     for (const item of useragents) {
       agent = SeeAgent.seeagent({query: item.query, httpUserAgent: item.userAgent});
-      assert.deepEqual(agent, item.parsed);
+      assert.deepEqual(agent, item.parsed, `[${useragents.indexOf(item)}], ${item.userAgent}`);
     }
   });
 
