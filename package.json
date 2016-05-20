@@ -1,7 +1,9 @@
 {
   "name": "@myfe/seeagent",
   "version": "0.1.0",
-  "engines" : { "node" : ">=4.2.0" },
+  "engines": {
+    "node": ">=6.1.0"
+  },
   "description": "useragent,mobile,browser",
   "homepage": "http://git.sankuai.com/projects/MYFE/repos/seeagent/browse",
   "author": {
@@ -20,6 +22,7 @@
   ],
   "repository": "Meituan/seeagent",
   "devDependencies": {
+    "ua-parser-js": "^0.7.10",
     "eslint": "^2.5.1",
     "eslint-config-airbnb": "^6.2.0",
     "eslint-plugin-react": "^4.2.3",
@@ -30,6 +33,7 @@
     "test": "mocha test"
   },
   "dependencies": {
+    "ua-device-type": "0.0.4",
     "useragent": "^2.1.9"
   }
 }
