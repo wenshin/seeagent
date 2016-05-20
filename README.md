@@ -8,9 +8,12 @@
 $ mnpm install --save @myfe/seeagent
 ```
 
+## Features
+
+* 支持美团、猫眼、大象、三星、PPTV、头条、票房等 APP 判断，不断更新中
+* 支持设备类型判断，包括 tv，desktop，phone，tablet
 
 ## Usage
-目前支持，美团、猫眼、大象、三星、PPTV、头条、票房等 APP 判断
 
 ```js
 var SeeAgent = require('seeagent');
@@ -22,18 +25,36 @@ var agentInfo = SeeAgent.seeagent({
 console.log(agentInfo);
 // {
 //   os: { family: 'Mac OS X', major: '10', minor: '11', patch: '3' },
-//   device: { family: 'Other', major: '0', minor: '0', patch: '0' },
-//   app: { family: 'Chrome', major: '49', minor: '0', patch: '2623' }
+//   device: { family: 'Other', major: '0', minor: '0', patch: '0', type: 'desktop' },
+//   app: { family: 'Chrome', major: '49', minor: '0', patch: '2623'}
 // }
 ```
 
+### 结果解释
+解析完成后会得到一个包含 os、device、app 三个属性的对象。
+其中三个属性都会包含以下属性：
+
+    {
+        // Chrome、FireFox、Safari、Mobile Safari、Chrome Mobile、Mobile Safari UIWebView
+        family: '系列名',
+        // 版本号
+        major: '9',
+        minor: '9',
+        patch: '9'
+    }
+
+device 属性还特有 type 属性，值为 tv，desktop（桌面），phone，tablet（平板）。
+app 属性还特有 vendor 属性，该属性是为了和移动应用嵌入的 WebView 名称进行区分，一般是嵌入 WebView 的应用名或厂商名。
+
 ## API
+
 `SeeAgent.seeagent({query, httpUserAgent, jsUserAgent})`
 获取操作系统、设备、和 App 信息
 
 **query**: URL query 参数字符串，用来辅助判断 App。
 **httpUserAgent**: HTTP UserAgent 字符串。
-**jsUserAgent**: useragent 包提供的额外的辅助判断字符串，详见 [useragent](https://github.com/3rd-Eden/useragent#useragentparseuseragent-string-js-useragent)。
+**jsUserAgent**: useragent 包提供的额外的辅助判断字符串，
+详见 [useragent](https://github.com/3rd-Eden/useragent#useragentparseuseragent-string-js-useragent)。
 
 `SeeAgent.extendQueryRules({[appName]: [/regexp rule1/, /regexp rule2/]})`
 扩展通过 URL query 参数判断 APP 的规则
@@ -56,8 +77,16 @@ $ npm run test
 ## TODO
 
 1. 更多的测试用例
-2. 判断浏览器内核和版本
-3. 判断网络状态（微信 UA 中有）
+2. 判断网络状态（微信 UA 中有）
+
+## ChangeLog
+
+### 2016-05-20 0.2.0
+
+* 添加设备类型
+* 区分移动应用和 WebView 名称
+* 优化代码结构
+* 添加性能测试
 
 ## License
 
