@@ -26,8 +26,6 @@
     "babel-cli": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
     "eslint": "^2.5.1",
-    "eslint-config-airbnb": "^6.2.0",
-    "eslint-plugin-react": "^4.2.3",
     "mocha": "^2.4.5",
     "ua-parser-js": "^0.7.10"
   },

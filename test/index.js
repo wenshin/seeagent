@@ -6,10 +6,10 @@ let useragents = require('./useragents');
 let SeeAgent;
 
 if (process.env.NODE_ENV === 'production') {
-  console.log('test dist')
+  console.log('testing dist/')
   SeeAgent = require('../dist');
 } else {
-  console.log('test lib')
+  console.log('testing lib/')
   SeeAgent = require('../lib');
 }
 
