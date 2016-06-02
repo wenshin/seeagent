@@ -2,7 +2,16 @@
 
 let assert = require('assert');
 let useragents = require('./useragents');
-let SeeAgent = require('../lib');
+
+let SeeAgent;
+
+if (process.env.NODE_ENV === 'production') {
+  console.log('test dist')
+  SeeAgent = require('../dist');
+} else {
+  console.log('test lib')
+  SeeAgent = require('../lib');
+}
 
 describe('seeagent', () => {
   it('should parsed all useragents right', () => {
