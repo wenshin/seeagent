@@ -18,6 +18,6 @@ module.exports = [{
   parsed: {
     os: { family: 'Mac OS X', major: '10', minor: '11', patch: '3' },
     device: { family: 'Other', major: '0', minor: '0', patch: '0', type: 'desktop' },
-    app: { family: 'Chrome', vendor: 'Daxiang', major: '1', minor: '0', patch: '0', isWebView: false }
+    browser: { family: 'Chrome', vendor: 'Daxiang', major: '1', minor: '0', patch: '0', isWebView: false }
   }
 }];

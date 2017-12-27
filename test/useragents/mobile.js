@@ -4,14 +4,15 @@ module.exports = [{
   parsed: {
     os: { family: 'Android', major: '5', minor: '1', patch: '1' },
     device: { family: 'Mi-4c', major: '0', minor: '0', patch: '0', type: 'phone' },
-    app: { family: 'Chrome Mobile', vendor: 'MaoyanPro', major: '1', minor: '5', patch: '0', isWebView: false }
+    app: { family: 'Chrome Mobile', vendor: 'MaoyanPro', major: '1', minor: '5', patch: '0', isWebView: true }
   }
 }, {
   userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13D15 Safari/601.1',
   parsed: {
     os: { family: 'iOS', major: '9', minor: '2', patch: '1' },
     device: { family: 'iPhone', major: '0', minor: '0', patch: '0', type: 'phone' },
-    app: { family: 'Mobile Safari', major: '9', minor: '0', patch: '0', isWebView: false },
+    browser: { family: 'Mobile Safari', major: '9', minor: '0', patch: '0', isWebView: false },
+    app: { family: 'Chrome' }
   }
 }, {
   userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 MicroMessenger/6.3.9 NetType/WIFI Language/zh_CN',
@@ -104,5 +105,16 @@ module.exports = [{
     os: { family: 'iOS', major: '9', minor: '3', patch: '2' },
     device: { family: 'iPhone', major: '0', minor: '0', patch: '0', type: 'phone' },
     app: { family: 'Mobile Safari UIWebView', vendor: 'Mogujie', major: '4', minor: '0', patch: '0', isWebView: true }
+  }
+}, {
+// 支付宝 IOS
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Mobile/15A432 Nebula PSDType(1) AlipayDefined(nt:WIFI,ws:320|504|2.0) AliApp(AP/10.1.5.102407) AlipayClient/10.1.5.102407 Alipay Language/en',
+  parsed: {
+    os: { family: 'iOS', major: '11', minor: '0', patch: '3' },
+    device: { family: 'iPhone', major: '0', minor: '0', patch: '0', type: 'phone' },
+    browser: { family: 'Mobile Safari UIWebView', major: '604', minor: '1', patch: '38', isWebView: true },
+    app: { family: 'Alipay', major: '10', minor: '1', patch: '5.102407'},
+    lang: 'en',
+    net: 'WIFI'
   }
 }];
