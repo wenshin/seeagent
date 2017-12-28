@@ -2,7 +2,7 @@
 
 let useragent = require('useragent');
 let uaParser = require('ua-parser-js');
-let SeeAgent = require('../lib');
+let seeagent = require('../lib');
 let ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36';
 
 let timesOptions = [10, 100, 10000, 100000];
@@ -20,8 +20,7 @@ for (let times of timesOptions) {
   counter = times;
   start = Date.now();
   while (counter--) {
-    // useragent 做了缓存，TODO 研究一下
-    SeeAgent.seeagent({httpUserAgent: ua});
+    seeagent(ua);
   }
   end = Date.now();
   console.log(`[${times}]SeeAgent consume: ${end - start}ms`);
