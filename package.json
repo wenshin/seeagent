@@ -23,19 +23,18 @@
   ],
   "repository": "Meituan/seeagent",
   "devDependencies": {
-    "babel-cli": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "eslint": "^2.5.1",
-    "mocha": "^2.4.5",
-    "ua-parser-js": "^0.7.10"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1"
   },
   "scripts": {
     "prepublish": "npm run dist && NODE_ENV=production npm run test",
     "dist": "babel lib -d dist",
-    "test": "node_modules/.bin/mocha $(find test -name '*.js' -depth 1 ! -name 'performance.js')"
+    "test": "istanbul cover node_modules/.bin/_mocha test/**/test*.js"
   },
   "dependencies": {
-    "ua-device-type": "0.0.4",
-    "useragent": "^2.1.9"
+    "ua-device-type": "0.0.4"
   }
 }

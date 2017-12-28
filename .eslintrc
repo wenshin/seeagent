@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb/base",
+  "extends": "eslint:recommended",
   "ecmaFeatures": {
     "classes": true,
     "modules": true,
@@ -11,12 +11,13 @@
     "es6": true
   },
   "rules": {
-    "strict": "error",
+    "global-strict": ["off"],
     "indent": ["error", 2],
     "object-curly-spacing": 0,
     "comma-dangle": 0,
     "prefer-const": 0,
     "max-len": [2, 120, 2],
-    "consistent-return": 0
+    "consistent-return": 0,
+    "no-use-before-define": ["error", {"functions": false}]
   }
 }
