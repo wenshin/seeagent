@@ -757,8 +757,75 @@ module.exports = [{
     }
   }
 }, {
-  ua: "Mozilla/5.0 (Linux; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv)",
+  userAgent: "Mozilla/5.0 (Linux; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv)",
   parsed: {
-
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "Linux; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv",
+      "unit": "Mozilla/5.0 (Linux; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv)",
+      "version": "5.0"
+    },
+    "app": null,
+    "os": {
+      "name": "Android",
+      "version": "7.0"
+    },
+    "device": {
+      "unit": "MHA-AL00 Build/HUAWEIMHA-AL00",
+      "name": "Huawei",
+      "version": "HUAWEIMHA-AL00",
+      "type": "phone"
+    }
+  }
+}, {
+  userAgent: "Mozilla/5.0 (iPod touch; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B511 Safari/9537.53",
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "iPod touch; CPU iPhone OS 7_0_3 like Mac OS X",
+      "unit": "Mozilla/5.0 (iPod touch; CPU iPhone OS 7_0_3 like Mac OS X)",
+      "version": "5.0"
+    },
+    "AppleWebKit": {
+      "name": "AppleWebKit",
+      "detail": "KHTML, like Gecko",
+      "unit": "AppleWebKit/537.51.1 (KHTML, like Gecko)",
+      "version": "537.51.1"
+    },
+    "Version": {
+      "name": "Version",
+      "detail": "",
+      "unit": "Version/7.0",
+      "version": "7.0"
+    },
+    "Mobile": {
+      "name": "Mobile",
+      "detail": "",
+      "unit": "Mobile/11B511",
+      "version": "11B511"
+    },
+    "Safari": {
+      "name": "Safari",
+      "detail": "",
+      "unit": "Safari/9537.53",
+      "version": "9537.53",
+      "isBrowser": true
+    },
+    "app": {
+      "name": "Safari",
+      "detail": "",
+      "unit": "Safari/9537.53",
+      "version": "9537.53",
+      "isBrowser": true
+    },
+    "os": {
+      "name": "iOS",
+      "version": "7.0.3"
+    },
+    "device": {
+      "name": "iPod",
+      "version": "",
+      "type": "tablet"
+    }
   }
 }];
