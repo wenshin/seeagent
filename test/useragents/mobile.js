@@ -324,7 +324,7 @@ module.exports = [{
     },
     "device": {
       "unit": "HUAWEI P7-L09 Build/HuaweiP7-L09",
-      "name": "HUAWEI P7-L09",
+      "name": "Huawei",
       "version": "HuaweiP7-L09",
       "type": "phone"
     }
@@ -755,5 +755,10 @@ module.exports = [{
       "version": "",
       "type": "phone"
     }
+  }
+}, {
+  ua: "Mozilla/5.0 (Linux; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv)",
+  parsed: {
+
   }
 }];
