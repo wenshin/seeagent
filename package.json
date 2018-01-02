@@ -1,14 +1,14 @@
 {
-  "name": "@myfe/seeagent",
-  "version": "0.2.3",
+  "name": "seeagent",
+  "version": "0.3.0",
   "engines": {
     "node": ">=6.1.0"
   },
   "description": "useragent,mobile,browser",
-  "homepage": "http://git.sankuai.com/projects/MYFE/repos/seeagent/browse",
+  "homepage": "https://github.com/wenshin/seeagent",
   "author": {
     "name": "yuanwen",
-    "email": "yanwenxu@meituan.com",
+    "email": "wenshin2011@gmail.com",
     "url": "https://github.com/wenshin"
   },
   "files": [
@@ -19,9 +19,10 @@
   "keywords": [
     "useragent",
     "mobile",
-    "browser"
+    "browser",
+    "node"
   ],
-  "repository": "Meituan/seeagent",
+  "repository": "https://github.com/wenshin/seeagent",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -37,6 +38,7 @@
     "test": "istanbul cover node_modules/.bin/_mocha test/**/test*.js"
   },
   "dependencies": {
+    "lru_map": "^0.3.3",
     "ua-device-type": "0.0.4"
   }
 }
