@@ -1,9 +1,19 @@
 'use strict';
 
-let useragent = require('useragent');
-let uaParser = require('ua-parser-js');
-let seeagent = require('../lib');
-let ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36';
+const _ = require('lodash');
+const useragent = require('useragent');
+const uaParser = require('ua-parser-js');
+const seeagent = require('../lib');
+const ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36';
+
+const uas = [];
+for (let i = 0; i < 600; i++) {
+  uas.push(`${ua}.${i}`);
+}
+
+function getUA() {
+  return uas[_.random(0, uas.length - 1)];
+}
 
 let timesOptions = [10, 100, 10000, 100000];
 
@@ -12,7 +22,7 @@ for (let times of timesOptions) {
   let start = Date.now();
   while (counter--) {
     // useragent 做了缓存，TODO 研究一下
-    useragent.lookup(ua);
+    useragent.lookup(getUA());
   }
   let end = Date.now();
   console.log(`[${times}]useragent consume: ${end - start}ms`);
@@ -20,7 +30,7 @@ for (let times of timesOptions) {
   counter = times;
   start = Date.now();
   while (counter--) {
-    seeagent(ua);
+    seeagent(getUA());
   }
   end = Date.now();
   console.log(`[${times}]SeeAgent consume: ${end - start}ms`);
@@ -28,7 +38,7 @@ for (let times of timesOptions) {
   counter = times;
   start = Date.now();
   while (counter--) {
-    uaParser(ua);
+    uaParser(getUA());
   }
   end = Date.now();
   console.log(`[${times}]uaParser consume: ${end - start}ms`);

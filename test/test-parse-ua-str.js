@@ -181,6 +181,16 @@ const cases = [
         "version": "en"
       }
     }
+  }, {
+    ua: 'Mozilla/foo/bar',
+    parsed: {
+      "Mozilla/foo/bar": {
+        "name": "Mozilla/foo/bar",
+        "detail": "",
+        "unit": "Mozilla/foo/bar",
+        "version": ""
+      },
+    }
   }
 ];
 
@@ -190,4 +200,22 @@ describe('parseUAStr', () => {
       assert.deepEqual(parseUAStr(c.ua), c.parsed, c.ua);
     }
   });
+
+  it('use custom parser', () => {
+    const obj = parseUAStr(cases[cases.length - 1].ua, (info) => {
+      const matched = info.unit.split('/');
+      return Object.assign(info, {
+        name: matched[0],
+        version: matched[2]
+      })
+    });
+    assert.deepEqual(obj, {
+      "Mozilla": {
+        "name": "Mozilla",
+        "detail": "",
+        "unit": "Mozilla/foo/bar",
+        "version": "bar"
+      }
+    });
+  })
 });

@@ -146,4 +146,17 @@ module.exports = [{
       "type": "desktop"
     }
   }
+}, {
+  userAgent: 'Mozilla/5.0 (InvalidDevice; Invalid 10_11_3)',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "InvalidDevice; Invalid 10_11_3",
+      "unit": "Mozilla/5.0 (InvalidDevice; Invalid 10_11_3)",
+      "version": "5.0"
+    },
+    "app": null,
+    "os": null,
+    "device": null
+  }
 }];

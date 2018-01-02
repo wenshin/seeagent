@@ -828,4 +828,7 @@ module.exports = [{
       "type": "tablet"
     }
   }
+}, {
+  userAgent: '',
+  parsed: {}
 }];
