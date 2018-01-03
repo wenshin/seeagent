@@ -149,7 +149,7 @@ module.exports = [{
       "name": "Language",
       "detail": "",
       "unit": "Language/zh_CN",
-      "version": "zh.CN"
+      "version": "zh_CN"
     },
     "app": {
       "name": "Wechat",
