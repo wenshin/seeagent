@@ -42,9 +42,9 @@ const TEST_UA_PARSED = {
   }
 };
 
-if (process.env.NODE_ENV === 'production') {
-  console.log('testing dist/')
-  seeagent = require('../dist');
+if (process.env.TEST_VERSION === 'es5') {
+  console.log('testing es5/')
+  seeagent = require('../es5');
 } else {
   console.log('testing lib/')
   seeagent = require('../lib');
