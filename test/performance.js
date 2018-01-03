@@ -7,7 +7,7 @@ const seeagent = require('../lib');
 const ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36';
 
 const uas = [];
-for (let i = 0; i < 600; i++) {
+for (let i = 0; i < 1000; i++) {
   uas.push(`${ua}.${i}`);
 }
 
@@ -17,6 +17,13 @@ function getUA() {
 
 let timesOptions = [10, 100, 10000, 100000];
 
+seeagent.config({
+  // useragent default cache 5000 items
+  size: 5000
+});
+
+console.log('1000 useragent samples, cache 5000 items\n')
+
 for (let times of timesOptions) {
   let counter = times;
   let start = Date.now();
@@ -25,15 +32,7 @@ for (let times of timesOptions) {
     useragent.lookup(getUA());
   }
   let end = Date.now();
-  console.log(`[${times}]useragent consume: ${end - start}ms`);
-
-  counter = times;
-  start = Date.now();
-  while (counter--) {
-    seeagent(getUA());
-  }
-  end = Date.now();
-  console.log(`[${times}]SeeAgent consume: ${end - start}ms`);
+  console.log(`${times} times, useragent consume: ${end - start}ms`);
 
   counter = times;
   start = Date.now();
@@ -41,7 +40,15 @@ for (let times of timesOptions) {
     uaParser(getUA());
   }
   end = Date.now();
-  console.log(`[${times}]uaParser consume: ${end - start}ms`);
+  console.log(`${times} times, ua-parser-js consume: ${end - start}ms`);
+
+  counter = times;
+  start = Date.now();
+  while (counter--) {
+    seeagent(getUA());
+  }
+  end = Date.now();
+  console.log(`${times} times, seeagent consume: ${end - start}ms\n`);
 }
 
 // 比较结果

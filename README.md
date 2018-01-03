@@ -5,99 +5,144 @@
 ## Install
 
 ```sh
-$ mnpm install --save @myfe/seeagent
+$ mnpm install --save seeagent
 ```
 
 ## Features
 
-* 支持美团、猫眼、大象、三星、PPTV、头条、票房等 APP 判断，不断更新中
-* 支持设备类型判断，包括 tv，desktop，phone，tablet
+* support Wechat, Meituan, Dianping, Maoyan, Alipay, Taobao, Weibo etc.
+* support device type detection, includes tv, desktop, phone, tablet
+* custom parser or custom rules
+* LRU cache
+* all info of useragent
 
 ## Usage
 
 ```js
-var SeeAgent = require('seeagent');
+var seeagent = require('seeagent');
 
-var agentInfo = SeeAgent.seeagent({
-    httpUserAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'
-});
+// config agent
+seeagent.config({
+  size: 5000, // default is 1000
+  rule: {
+    app: [],
+    browser: [],
+    os: [],
+    device: []
+  }
+})
 
-console.log(agentInfo);
+var info = seeagent('Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 MicroMessenger/6.3.9 NetType/WIFI Language/zh_CN');
+
+console.log(info);
 // {
-//   os: { family: 'Mac OS X', major: '10', minor: '11', patch: '3' },
-//   device: { family: 'Other', major: '0', minor: '0', patch: '0', type: 'desktop' },
-//   app: { family: 'Chrome', major: '49', minor: '0', patch: '2623'}
+//   "Mozilla": {
+//     "name": "Mozilla",
+//     "detail": "iPhone; CPU iPhone OS 9_2_1 like Mac OS X",
+//     "unit": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X)",
+//     "version": "5.0"
+//   },
+//   "AppleWebKit": {
+//     "name": "AppleWebKit",
+//     "detail": "KHTML, like Gecko",
+//     "unit": "AppleWebKit/601.1.46 (KHTML, like Gecko)",
+//     "version": "601.1.46"
+//   },
+//   "Mobile": {
+//     "name": "Mobile",
+//     "detail": "",
+//     "unit": "Mobile/13D15",
+//     "version": "13D15"
+//   },
+//   "MicroMessenger": {
+//     "name": "Wechat",
+//     "detail": "",
+//     "unit": "MicroMessenger/6.3.9",
+//     "version": "6.3.9"
+//   },
+//   "NetType": {
+//     "name": "NetType",
+//     "detail": "",
+//     "unit": "NetType/WIFI",
+//     "version": "WIFI"
+//   },
+//   "Language": {
+//     "name": "Language",
+//     "detail": "",
+//     "unit": "Language/zh_CN",
+//     "version": "zh_CN"
+//   },
+//   "app": {
+//     "name": "Wechat",
+//     "detail": "",
+//     "unit": "MicroMessenger/6.3.9",
+//     "version": "6.3.9"
+//   },
+//   "os": {
+//     "name": "iOS",
+//     "version": "9.2.1"
+//   },
+//   "device": {
+//     "name": "iPhone",
+//     "version": "",
+//     "type": "phone"
+//   }
 // }
 ```
+more examples see test/useragents
 
-### 结果解释
-解析完成后会得到一个包含 os、device、app 三个属性的对象。
-其中三个属性都会包含以下属性：
+### Result Explanation
+First, seeagent will parse the User-Agent into object by the rule of https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent.
+The property of object is the product of a User-Agent unit. After get the parsed object, seeagent use the property rules to find the app and browser info and use the regular expression find the os and device info.
 
-    {
-        // Chrome、FireFox、Safari、Mobile Safari、Chrome Mobile、Mobile Safari UIWebView
-        family: '系列名',
-        // 版本号
-        major: '9',
-        minor: '9',
-        patch: '9'
-    }
+### Performance
 
-device 属性还特有 type 属性，值为 tv，desktop（桌面），phone，tablet（平板）。
+    1000 useragent samples, cache 5000 items
 
-app 属性还特有 vendor，isWebView 属性，
-1. vendor 属性是为了和移动应用嵌入的 WebView 名称进行区分，一般是嵌入 WebView 的应用名或厂商名。
-2. isWebView 属性是判断是否webview
+    10 times, useragent consume: 5ms
+    10 times, ua-parser-js consume: 5ms
+    10 times, seeagent consume: 3ms
+
+    100 times, useragent consume: 11ms
+    100 times, ua-parser-js consume: 6ms
+    100 times, seeagent consume: 5ms
+
+    10000 times, useragent consume: 71ms
+    10000 times, ua-parser-js consume: 338ms
+    10000 times, seeagent consume: 35ms
+
+    100000 times, useragent consume: 83ms
+    100000 times, ua-parser-js consume: 2983ms
+    100000 times, seeagent consume: 14ms
 
 ## API
 
-`SeeAgent.seeagent({query, httpUserAgent, jsUserAgent})`
-获取操作系统、设备、和 App 信息
+`seeagent.config(options?: Options)`
+config the cache size or custom rules
 
-**query**: URL query 参数字符串，用来辅助判断 App。
-**httpUserAgent**: HTTP UserAgent 字符串。
-**jsUserAgent**: useragent 包提供的额外的辅助判断字符串，
-详见 [useragent](https://github.com/3rd-Eden/useragent#useragentparseuseragent-string-js-useragent)。
+    // [name, props]
+    type KeyRule = [string, string[]];
+    // [name, rules, meta?]
+    type RegExpRule = [string, Array<string | RegExp>, Object];
 
-`SeeAgent.extendQueryRules([{info: {vendor: 'App1'}, rules: [/App123/i, /App234/i]}])`
-扩展通过 URL query 参数判断 APP 的规则
+    interface Options {
+      size?: number, // the cache max size, default is 1000
+      rule?: {app?: KeyRule[], os?: RegExpRule[], device?: RegExpRule[]}
+    }
 
-`SeeAgent.extendFingerprints([{info: {vendor: 'App1'}, rules: [/App123/i, /App234/i]}])`
-扩展通过通过 UserAgent 参数判断 APP 的规则
-
+`function seeagent(ua: string): Object`
 
 ## Development
 
 ```
-$ git clone ssh://git@git.sankuai.com/myfe/seeagent.git
-$ npm install .
-$ npm run test
+$ git clone git@github.com:wenshin/seeagent.git
+$ yarn install
+$ npm test
 ```
-
-### 添加规则
-规则分为 UserAgent 规则和 Query 参数规则。存放在在 lib/rules 下
-
-## TODO
-
-1. 更多的测试用例
-2. 判断网络状态（微信 UA 中有）
 
 ## ChangeLog
 
-### 2016-05-20 0.2.2
-
-*  添加 isWebView 属性到 app 属性
-
-### 2016-05-20 0.2.1
-
-* 更新规则 API
-
-### 2016-05-20 0.2.0
-
-* 添加设备类型
-* 区分移动应用和 WebView 名称
-* 优化代码结构
-* 添加性能测试
+### 2017-01-02 1.0.0
 
 ## License
 
