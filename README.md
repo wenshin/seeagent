@@ -23,7 +23,7 @@ var seeagent = require('seeagent');
 
 // config agent
 seeagent.config({
-  size: 5000, // default is 1000
+  size: 5000, // cache limit, default is 1000
   rule: {
     app: [],
     browser: [],
