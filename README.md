@@ -5,7 +5,8 @@
 ## Install
 
 ```sh
-$ mnpm install --save seeagent
+$ npm install --save seeagent
+$ yarn add seeagent
 ```
 
 ## Features
