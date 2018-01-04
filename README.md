@@ -145,6 +145,11 @@ $ npm test
 
 ## ChangeLog
 
+### 2017-01-02 1.0.1
+
+    * remove ua-device-type, it not have enough information for all types
+    * support windows productions
+
 ### 2017-01-02 1.0.0
 
 ## License
