@@ -40,7 +40,6 @@ module.exports = [{
     "device": {
       "name": "Macintosh",
       "version": "",
-      "type": "desktop"
     }
   }
 }, {
@@ -86,7 +85,6 @@ module.exports = [{
     "device": {
       "name": "Macintosh",
       "version": "",
-      "type": "desktop"
     }
   }
 }, {
@@ -143,7 +141,6 @@ module.exports = [{
     "device": {
       "name": "Macintosh",
       "version": "",
-      "type": "desktop"
     }
   }
 }, {
@@ -159,4 +156,141 @@ module.exports = [{
     "os": null,
     "device": null
   }
+}, {
+  userAgent: 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:24.0) Gecko/20100101 Firefox/24.0',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "X11; Ubuntu; Linux i686; rv:24.0",
+      "unit": "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:24.0)",
+      "version": "5.0"
+    },
+    "Gecko": {
+      "name": "Gecko",
+      "detail": "",
+      "unit": "Gecko/20100101",
+      "version": "20100101"
+    },
+    "Firefox": {
+      "name": "Firefox",
+      "detail": "",
+      "unit": "Firefox/24.0",
+      "version": "24.0",
+      "isBrowser": true
+    },
+    "app": {
+      "name": "Firefox",
+      "detail": "",
+      "unit": "Firefox/24.0",
+      "version": "24.0",
+      "isBrowser": true
+    },
+    "os": {
+      "name": "Linux",
+      "version": "i686"
+    },
+    "device": null
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0",
+      "unit": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)",
+      "version": "5.0"
+    },
+    "app": {
+      "name": "IE",
+      "version": "9.0",
+      "isBrowser": true
+    },
+    "os": {
+      "name": "Windows",
+      "version": "6.1"
+    },
+    "device": null
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "Windows NT 10.0; WOW64; Trident/7.0; rv:11.0",
+      "unit": "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0)",
+      "version": "5.0"
+    },
+    "like": {
+      "name": "like",
+      "detail": "",
+      "unit": "like",
+      "version": ""
+    },
+    "Gecko": {
+      "name": "Gecko",
+      "detail": "",
+      "unit": "Gecko",
+      "version": ""
+    },
+    "app": {
+      "name": "IE",
+      "version": "11.0",
+      "isBrowser": true
+    },
+    "os": {
+      "name": "Windows",
+      "version": "10.0"
+    },
+    "device": null
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "Windows NT 10.0; Win64; x64",
+      "unit": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "version": "5.0"
+    },
+    "AppleWebKit": {
+      "name": "AppleWebKit",
+      "detail": "KHTML, like Gecko",
+      "unit": "AppleWebKit/537.36 (KHTML, like Gecko)",
+      "version": "537.36"
+    },
+    "Chrome": {
+      "name": "Chrome",
+      "detail": "",
+      "unit": "Chrome/51.0.2704.79",
+      "version": "51.0.2704.79"
+    },
+    "Safari": {
+      "name": "Safari",
+      "detail": "",
+      "unit": "Safari/537.36",
+      "version": "537.36"
+    },
+    "Edge": {
+      "name": "Edge",
+      "detail": "",
+      "unit": "Edge/14.14393",
+      "version": "14.14393",
+      "isBrowser": true
+    },
+    "app": {
+      "name": "Edge",
+      "detail": "",
+      "unit": "Edge/14.14393",
+      "version": "14.14393",
+      "isBrowser": true
+    },
+    "os": {
+      "name": "Windows",
+      "version": "10.0"
+    },
+    "device": null
+  }
+}, {
+  userAgent: '',
+  parsed: {}
 }];

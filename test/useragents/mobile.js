@@ -58,7 +58,6 @@ module.exports = [{
       "unit": "Mi-4c Build/LMY47V",
       "name": "Mi-4c",
       "version": "LMY47V",
-      "type": "phone"
     }
   }
 }, {
@@ -109,7 +108,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -164,7 +162,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -215,7 +212,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -264,7 +260,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -326,7 +321,6 @@ module.exports = [{
       "unit": "HUAWEI P7-L09 Build/HuaweiP7-L09",
       "name": "Huawei",
       "version": "HuaweiP7-L09",
-      "type": "phone"
     }
   }
 }, {
@@ -369,7 +363,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -424,7 +417,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -467,7 +459,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -529,7 +520,6 @@ module.exports = [{
       "unit": "M351 Build/KTU84P",
       "name": "M351",
       "version": "KTU84P",
-      "type": "phone"
     }
   }
 }, {
@@ -596,7 +586,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -648,7 +637,6 @@ module.exports = [{
       "unit": "Nexus 5 Build/JOP40D",
       "name": "Nexus 5",
       "version": "JOP40D",
-      "type": "phone"
     }
   }
 }, {
@@ -673,7 +661,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -753,7 +740,6 @@ module.exports = [{
     "device": {
       "name": "iPhone",
       "version": "",
-      "type": "phone"
     }
   }
 }, {
@@ -774,7 +760,6 @@ module.exports = [{
       "unit": "MHA-AL00 Build/HUAWEIMHA-AL00",
       "name": "Huawei",
       "version": "HUAWEIMHA-AL00",
-      "type": "phone"
     }
   }
 }, {
@@ -825,10 +810,344 @@ module.exports = [{
     "device": {
       "name": "iPod",
       "version": "",
-      "type": "tablet"
     }
   }
 }, {
-  userAgent: '',
-  parsed: {}
+  userAgent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0",
+      "unit": "Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)",
+      "version": "5.0"
+    },
+    "app": {
+      "name": "IEMobile",
+      "version": "9.0",
+      "isBrowser": true
+    },
+    "os": {
+      "name": "WindowsPhone",
+      "version": "7.5"
+    },
+    "device": null
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; Microsoft; Lumia 540 Dual SIM) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; Microsoft; Lumia 540 Dual SIM",
+      "unit": "Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; Microsoft; Lumia 540 Dual SIM)",
+      "version": "5.0"
+    },
+    "like": {
+      "name": "like",
+      "detail": "",
+      "unit": "like",
+      "version": ""
+    },
+    "iPhone": {
+      "name": "iPhone",
+      "detail": "",
+      "unit": "iPhone",
+      "version": ""
+    },
+    "OS": {
+      "name": "OS",
+      "detail": "",
+      "unit": "OS",
+      "version": ""
+    },
+    "7_0_3": {
+      "name": "7_0_3",
+      "detail": "",
+      "unit": "7_0_3",
+      "version": ""
+    },
+    "Mac": {
+      "name": "Mac",
+      "detail": "",
+      "unit": "Mac",
+      "version": ""
+    },
+    "X": {
+      "name": "X",
+      "detail": "",
+      "unit": "X",
+      "version": ""
+    },
+    "AppleWebKit": {
+      "name": "AppleWebKit",
+      "detail": "KHTML, like Gecko",
+      "unit": "AppleWebKit/537 (KHTML, like Gecko)",
+      "version": "537"
+    },
+    "Mobile": {
+      "name": "Mobile",
+      "detail": "",
+      "unit": "Mobile",
+      "version": ""
+    },
+    "Safari": {
+      "name": "Safari",
+      "detail": "",
+      "unit": "Safari/537",
+      "version": "537",
+      "isBrowser": true
+    },
+    "app": {
+      "name": "IEMobile",
+      "version": "11.0",
+      "isBrowser": true
+    },
+    "os": {
+      "name": "WindowsPhone",
+      "version": "8.1"
+    },
+    "device": {
+      "name": "Lumia",
+      "version": "540 Dual SIM"
+    }
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Mobile/15A432 TitansX/11.0.12 KNB/1.2.0 iOS/11.0.3 meituangroup/com.meituan.imeituan/8.6.1 meituangroup/8.6.1',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "iPhone; CPU iPhone OS 11_0_3 like Mac OS X",
+      "unit": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X)",
+      "version": "5.0"
+    },
+    "AppleWebKit": {
+      "name": "AppleWebKit",
+      "detail": "KHTML, like Gecko",
+      "unit": "AppleWebKit/604.1.38 (KHTML, like Gecko)",
+      "version": "604.1.38"
+    },
+    "Mobile": {
+      "name": "Mobile",
+      "detail": "",
+      "unit": "Mobile/15A432",
+      "version": "15A432"
+    },
+    "TitansX": {
+      "name": "TitansX",
+      "detail": "",
+      "unit": "TitansX/11.0.12",
+      "version": "11.0.12"
+    },
+    "KNB": {
+      "name": "KNB",
+      "detail": "",
+      "unit": "KNB/1.2.0",
+      "version": "1.2.0"
+    },
+    "iOS": {
+      "name": "iOS",
+      "detail": "",
+      "unit": "iOS/11.0.3",
+      "version": "11.0.3"
+    },
+    "meituangroup/com.meituan.imeituan": {
+      "name": "meituangroup/com.meituan.imeituan",
+      "detail": "",
+      "unit": "meituangroup/com.meituan.imeituan/8.6.1",
+      "version": "8.6.1"
+    },
+    "meituangroup": {
+      "name": "Meituan",
+      "detail": "",
+      "unit": "meituangroup/8.6.1",
+      "version": "8.6.1"
+    },
+    "app": {
+      "name": "Meituan",
+      "detail": "",
+      "unit": "meituangroup/8.6.1",
+      "version": "8.6.1"
+    },
+    "os": {
+      "name": "iOS",
+      "version": "11.0.3"
+    },
+    "device": {
+      "name": "iPhone",
+      "version": ""
+    }
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Mobile/15A432 TitansNoX/11.0.12 KNB/1.2.0 iOS/11.0.3 dp/com.dianping.dpscope/9.6.0 dp/9.6.0',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "iPhone; CPU iPhone OS 11_0_3 like Mac OS X",
+      "unit": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X)",
+      "version": "5.0"
+    },
+    "AppleWebKit": {
+      "name": "AppleWebKit",
+      "detail": "KHTML, like Gecko",
+      "unit": "AppleWebKit/604.1.38 (KHTML, like Gecko)",
+      "version": "604.1.38"
+    },
+    "Mobile": {
+      "name": "Mobile",
+      "detail": "",
+      "unit": "Mobile/15A432",
+      "version": "15A432"
+    },
+    "TitansNoX": {
+      "name": "TitansNoX",
+      "detail": "",
+      "unit": "TitansNoX/11.0.12",
+      "version": "11.0.12"
+    },
+    "KNB": {
+      "name": "KNB",
+      "detail": "",
+      "unit": "KNB/1.2.0",
+      "version": "1.2.0"
+    },
+    "iOS": {
+      "name": "iOS",
+      "detail": "",
+      "unit": "iOS/11.0.3",
+      "version": "11.0.3"
+    },
+    "dp/com.dianping.dpscope": {
+      "name": "Dianping",
+      "detail": "",
+      "unit": "dp/com.dianping.dpscope/9.6.0",
+      "version": "9.6.0"
+    },
+    "dp": {
+      "name": "dp",
+      "detail": "",
+      "unit": "dp/9.6.0",
+      "version": "9.6.0"
+    },
+    "app": {
+      "name": "Dianping",
+      "detail": "",
+      "unit": "dp/com.dianping.dpscope/9.6.0",
+      "version": "9.6.0"
+    },
+    "os": {
+      "name": "iOS",
+      "version": "11.0.3"
+    },
+    "device": {
+      "name": "iPhone",
+      "version": ""
+    }
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Mobile/15A432 TitansX/1.0.0 KNB/1.2.0 iOS/11.0.3 moviepro/com.meituan.moviepro.ep/4.2.0 moviepro/4.2.0',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "iPhone; CPU iPhone OS 11_0_3 like Mac OS X",
+      "unit": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X)",
+      "version": "5.0"
+    },
+    "AppleWebKit": {
+      "name": "AppleWebKit",
+      "detail": "KHTML, like Gecko",
+      "unit": "AppleWebKit/604.1.38 (KHTML, like Gecko)",
+      "version": "604.1.38"
+    },
+    "Mobile": {
+      "name": "Mobile",
+      "detail": "",
+      "unit": "Mobile/15A432",
+      "version": "15A432"
+    },
+    "TitansX": {
+      "name": "TitansX",
+      "detail": "",
+      "unit": "TitansX/1.0.0",
+      "version": "1.0.0"
+    },
+    "KNB": {
+      "name": "KNB",
+      "detail": "",
+      "unit": "KNB/1.2.0",
+      "version": "1.2.0"
+    },
+    "iOS": {
+      "name": "iOS",
+      "detail": "",
+      "unit": "iOS/11.0.3",
+      "version": "11.0.3"
+    },
+    "moviepro/com.meituan.moviepro.ep": {
+      "name": "MaoyanPro",
+      "detail": "",
+      "unit": "moviepro/com.meituan.moviepro.ep/4.2.0",
+      "version": "4.2.0"
+    },
+    "moviepro": {
+      "name": "moviepro",
+      "detail": "",
+      "unit": "moviepro/4.2.0",
+      "version": "4.2.0"
+    },
+    "app": {
+      "name": "MaoyanPro",
+      "detail": "",
+      "unit": "moviepro/com.meituan.moviepro.ep/4.2.0",
+      "version": "4.2.0"
+    },
+    "os": {
+      "name": "iOS",
+      "version": "11.0.3"
+    },
+    "device": {
+      "name": "iPhone",
+      "version": ""
+    }
+  }
+}, {
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Mobile/15A432 XM/4.14.2.1318',
+  parsed: {
+    "Mozilla": {
+      "name": "Mozilla",
+      "detail": "iPhone; CPU iPhone OS 11_0_3 like Mac OS X",
+      "unit": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X)",
+      "version": "5.0"
+    },
+    "AppleWebKit": {
+      "name": "AppleWebKit",
+      "detail": "KHTML, like Gecko",
+      "unit": "AppleWebKit/604.1.38 (KHTML, like Gecko)",
+      "version": "604.1.38"
+    },
+    "Mobile": {
+      "name": "Mobile",
+      "detail": "",
+      "unit": "Mobile/15A432",
+      "version": "15A432"
+    },
+    "XM": {
+      "name": "Daxiang",
+      "detail": "",
+      "unit": "XM/4.14.2.1318",
+      "version": "4.14.2.1318"
+    },
+    "app": {
+      "name": "Daxiang",
+      "detail": "",
+      "unit": "XM/4.14.2.1318",
+      "version": "4.14.2.1318"
+    },
+    "os": {
+      "name": "iOS",
+      "version": "11.0.3"
+    },
+    "device": {
+      "name": "iPhone",
+      "version": ""
+    }
+  }
 }];
