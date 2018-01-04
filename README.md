@@ -20,7 +20,9 @@ $ yarn add seeagent
 ## Usage
 
 ```js
-var seeagent = require('seeagent');
+const seeagent = require('seeagent');
+// es5 version
+// var seeagent = require('seeagent/es5');
 
 // config agent
 seeagent.config({
@@ -33,7 +35,7 @@ seeagent.config({
   }
 })
 
-var info = seeagent('Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 MicroMessenger/6.3.9 NetType/WIFI Language/zh_CN');
+const info = seeagent('Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 MicroMessenger/6.3.9 NetType/WIFI Language/zh_CN');
 
 console.log(info);
 // {
