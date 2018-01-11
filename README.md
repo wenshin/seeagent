@@ -145,6 +145,10 @@ $ npm test
 
 ## ChangeLog
 
+### 2017-01-11 1.0.2
+
+    * performance enhancement
+
 ### 2017-01-02 1.0.1
 
     * remove ua-device-type, it not have enough information for all types
