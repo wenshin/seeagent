@@ -145,6 +145,10 @@ $ npm test
 
 ## ChangeLog
 
+### 2017-01-11 1.0.3
+
+    * fix lodash and handlebars security alerts
+
 ### 2017-01-11 1.0.2
 
     * performance enhancement

@@ -1,6 +1,6 @@
 {
   "name": "seeagent",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "engines": {
     "node": ">=6.1.0"
   },
@@ -27,7 +27,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.14.0",
-    "istanbul": "^0.4.5",
+    "istanbul": "1.1.0-alpha.1",
     "mocha": "^4.0.1",
     "ua-parser-js": "^0.7.17",
     "useragent": "^2.2.1"
@@ -38,6 +38,7 @@
     "test": "istanbul cover node_modules/.bin/_mocha test/**/test*.js"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
     "lru_map": "^0.3.3"
   }
 }
